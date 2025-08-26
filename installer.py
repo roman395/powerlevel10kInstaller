@@ -37,6 +37,12 @@ def init():
    print('Init complete') 
 
 def dependencies():
-  
-
+  print('Installation start')
+  if !isArch:
+    sub.run(f'{installCom} -y zsh curl', shell=True)
+  else:
+    sub.run(f'{installCom} --noconfim zsh curl', shell=True)
+  sub.run('sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"',shell=True)
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+  print('Installation complete')
 init()
