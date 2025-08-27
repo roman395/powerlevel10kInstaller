@@ -6,4 +6,4 @@ Copy this command into your terminal:`git clone https://github.com/roman395/powe
 `python3`
 ## Usage
 After cloning, enter into folder and run script by:`sudo python installer.py`
-**(Don't forget set up fonts before runnig script!)**
+**(Don't forget set up fonts before runnig script! Else sth icon might broke)**
