@@ -22,7 +22,7 @@ def init():
   out = sub.run('cat ~/*release | grep "^ID_LIKE="',stdout=sub.PIPE,encoding='utf-8',shell=True)
   idLike = out.stdout.split('=', 1)[-1].strip()
 
-  if idLike == arch: isArch = True
+  if idLike == 'arch': isArch = True
   else: isArch = False
 
   try:
