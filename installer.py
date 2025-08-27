@@ -69,9 +69,22 @@ def dependencies() -> None:
     print("Installation complete")
 
 
+def dotFile() -> None:
+    sub.run("cp -f .zshrc ~/", shell=True)
+    sub.run(
+        "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
+        shell=True,
+    )
+    sub.run(
+        "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
+        shell=True,
+    )
+
+
 def main():
     init()
     dependencies()
+    dotFile()
 
 
 if __name__ == "__main__":
